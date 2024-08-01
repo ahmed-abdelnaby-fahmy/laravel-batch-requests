@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/aef/laravel-batch-requests.svg?style=flat-square)](https://packagist.org/packages/aef/laravel-batch-requests)
 [![Total Downloads](https://img.shields.io/packagist/dt/aef/laravel-batch-requests.svg?style=flat-square)](https://packagist.org/packages/aef/laravel-batch-requests)
-[![License](https://img.shields.io/packagist/l/aef/laravel-batch-requests.svg?style=flat-square)](https://packagist.org/packages/aef/laravel-batch-requests)
+![License](https://badgen.net/badge/license/MIT/blue)
 
 A Laravel package for efficiently handling multiple API requests in a single batch operation, reducing network overhead
 and improving performance for bulk operations.
