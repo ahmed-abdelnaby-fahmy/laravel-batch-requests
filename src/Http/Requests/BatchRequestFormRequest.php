@@ -18,6 +18,7 @@ class BatchRequestFormRequest extends FormRequest
             'requests.*.method' => 'required|string|in:GET,POST,PUT,PATCH,DELETE',
             'requests.*.id' => 'required|string',
             'requests.*.uri' => 'required|string',
+            'requests.*.routeParameters' => 'sometimes|array',
             'requests.*.parameters' => 'sometimes|array',
             'requests.*.headers' => 'sometimes|array',
         ];

@@ -5,7 +5,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "LaravelBatchRequests\\": "src/"
+            "LaravelBatchRequests\\": "src/",
+            "LaravelBatchRequests\\Tests\\": "tests/"
         }
     },
     "authors": [
