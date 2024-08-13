@@ -3,19 +3,19 @@
 namespace LaravelBatchRequests\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use LaravelBatchRequests\Facades\BatchRequest;
+use LaravelBatchRequests\SingleRequestHandler;
+use LaravelBatchRequests\BatchRequest;
 
 class BatchRequestServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
     public function register()
     {
-        $this->app->singleton('batch-request', function ($app) {
-            return new BatchRequest([]);
+        $this->app->singleton(SingleRequestHandler::class, function ($app) {
+            return new SingleRequestHandler($app['router']);
+        });
+
+        $this->app->bind('batch-request', function ($app) {
+            return new BatchRequest($app[SingleRequestHandler::class],[], []);
         });
 
         $this->mergeConfigFrom(
@@ -23,11 +23,6 @@ class BatchRequestServiceProvider extends ServiceProvider
         );
     }
 
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
     public function boot()
     {
         $this->publishes([
