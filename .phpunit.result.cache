@@ -1,1 +1,1 @@
-{"version":1,"defects":[],"times":{"LaravelBatchRequests\\Tests\\BatchRequestTest::testBatchRequestProcessing":0.033,"LaravelBatchRequests\\Tests\\BatchRequestTest::testBatchRequestHandlesErrors":0.002}}
+{"version":2,"defects":[],"times":{"LaravelBatchRequests\\Tests\\BatchRequestTest::testBatchRequestProcessing":0.059,"LaravelBatchRequests\\Tests\\BatchRequestTest::testBatchRequestHandlesErrors":0.001}}
